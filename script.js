@@ -43,4 +43,39 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+function playGame() {
+    const humanChoice1 = getHumanChoice();
+    const computerChoice1 = getComputerChoice();
+    playRound(humanChoice1, computerChoice1);
+    
+    const humanChoice2 = getHumanChoice();
+    const computerChoice2 = getComputerChoice();
+    playRound(humanChoice2, computerChoice2);
 
+    const humanChoice3 = getHumanChoice();
+    const computerChoice3 = getComputerChoice();
+    playRound(humanChoice3, computerChoice3);
+
+    const humanChoice4 = getHumanChoice();
+    const computerChoice4= getComputerChoice();
+    playRound(humanChoice4, computerChoice4);
+
+    const humanChoice5 = getHumanChoice();
+    const computerChoice5 = getComputerChoice();
+    playRound(humanChoice5, computerChoice5);
+
+    // display final score
+
+    console.log(`Final Score - You: ${humanScore}, computer: ${computerScore}`);
+
+    if (humanScore > computerScore) {
+        console.log("You Win the game");
+    } else if (humanScore < computerScore) {
+        console.log("Computer wins the game");
+    } else {
+        console.log("Its a tie game!");
+    }
+
+}
+
+playGame();
