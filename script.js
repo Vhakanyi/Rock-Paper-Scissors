@@ -11,14 +11,15 @@ function getComputerChoice() {
         return "scissors";
     }
 }
-
-// The function to get the human choice
+// The Function to get the Human choice.
 
 function getHumanChoice() {
-    return prompt("Enter: rock, paper or scissors.").toLowerCase();
-
+    return prompt ("Enter: rock, paper or scissors").toLowerCase();
 }
 
-console.log(getHumanChoice());
+// Declare the players score variables globally
+
+let humanScore = 0;
+let computerScore = 0;
 
 
