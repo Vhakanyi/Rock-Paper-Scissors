@@ -22,4 +22,25 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
+// function to play a single round.
+
+function playRound(humanChoice, computerChoice) {
+    console.log(`You chose: ${humanChoice}`);
+    console.log(`Computer chose: ${computerChoice}`);
+
+    if (humanChoice === computerChoice) {
+        console.log("It's a tie game!")
+    } else if (
+        (humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" &&  computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper")
+    ){
+        console.log(`You Win ${humanChoice} beats ${computerChoice}`);
+        humanScore++;
+    }else{
+        console.log(`You lost ${computerChoice} beats ${humanChoice}`);
+        computerScore++;
+    }
+}
+
 
